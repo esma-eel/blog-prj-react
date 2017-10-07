@@ -6,7 +6,13 @@ import "../semantic/dist/semantic.rtl.min.css";
 import '../css/master.css';
 
 class SearchHeader extends Component {
-   
+    constructor(props) {
+        super(props)
+        this.handleChange = this.handleChange.bind(this);
+    }
+   handleChange(e) {
+       alert(this.refs.searchded.value)
+   }
 
     render() {
         
@@ -18,7 +24,7 @@ class SearchHeader extends Component {
               <div className='search-header'>
                 <Form action='/searchResult'>
                     <Form.Field>
-                        <Input placeholder='نام مقاله ، برچسب و ... را جستجو کنید'  size='large'/>
+                        <Input placeholder='نام مقاله ، برچسب و ... را جستجو کنید'  size='large' ref='searchded' onChange={this.handleChange}/>
                     </Form.Field>
                 </Form>
               </div>

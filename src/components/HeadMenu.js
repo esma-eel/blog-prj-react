@@ -50,7 +50,11 @@ class HeadMenu extends Component {
                         onClick={this.handleItemClick}
 
                     >
+                    <Link to={{
+                        pathname: '/dashboard',
+                    }} className='my-text-midnight-blue'>
                         مرکز مدیریت
+                        </Link>
                 </Menu.Item>
 
 
