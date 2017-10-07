@@ -1,0 +1,9 @@
+@mixin  mhero ($color, $bg-color, $bg-img) {
+  color: $color;
+  background-color: $bg-color;
+  background-image: url("../img/#{$bg-img}");
+}
+
+@mixin vh-height ($vh) {
+  height:$vh;
+}

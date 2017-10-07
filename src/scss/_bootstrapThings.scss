@@ -1,0 +1,273 @@
+/*BOOOTSTARP SHITS*/
+
+.msr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.msr-only-focusable:active,
+.msr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+.mclearfix:before,
+.mclearfix:after {
+  content: " ";
+  display: table;
+}
+.mclearfix:after {
+  clear: both;
+}
+.mcenter-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mpull-right {
+  float: right !important;
+}
+.mpull-left {
+  float: left !important;
+}
+.mhide {
+  display: none !important;
+}
+.mshow {
+  display: block !important;
+}
+.minvisible {
+  visibility: hidden;
+}
+.mtext-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.mhidden {
+  display: none !important;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+.mvisible-xs,
+.mvisible-sm,
+.mvisible-md,
+.mvisible-lg {
+  display: none !important;
+}
+.mvisible-xs-block,
+.mvisible-xs-inline,
+.mvisible-xs-inline-block,
+.mvisible-sm-block,
+.mvisible-sm-inline,
+.mvisible-sm-inline-block,
+.mvisible-md-block,
+.mvisible-md-inline,
+.mvisible-md-inline-block,
+.mvisible-lg-block,
+.mvisible-lg-inline,
+.mvisible-lg-inline-block {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .mvisible-xs {
+    display: block !important;
+  }
+  table.mvisible-xs {
+    display: table !important;
+  }
+  tr.mvisible-xs {
+    display: table-row !important;
+  }
+  th.mvisible-xs,
+  td.mvisible-xs {
+    display: table-cell !important;
+  }
+}
+@media (max-width: 767px) {
+  .mvisible-xs-block {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .mvisible-xs-inline {
+    display: inline !important;
+  }
+}
+@media (max-width: 767px) {
+  .mvisible-xs-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mvisible-sm {
+    display: block !important;
+  }
+  table.mvisible-sm {
+    display: table !important;
+  }
+  tr.mvisible-sm {
+    display: table-row !important;
+  }
+  th.mvisible-sm,
+  td.mvisible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mvisible-sm-block {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mvisible-sm-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mvisible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mvisible-md {
+    display: block !important;
+  }
+  table.mvisible-md {
+    display: table !important;
+  }
+  tr.mvisible-md {
+    display: table-row !important;
+  }
+  th.mvisible-md,
+  td.mvisible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mvisible-md-block {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mvisible-md-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mvisible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .mvisible-lg {
+    display: block !important;
+  }
+  table.mvisible-lg {
+    display: table !important;
+  }
+  tr.mvisible-lg {
+    display: table-row !important;
+  }
+  th.mvisible-lg,
+  td.mvisible-lg {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 1200px) {
+  .mvisible-lg-block {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .mvisible-lg-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 1200px) {
+  .mvisible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (max-width: 767px) {
+  .mhidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mhidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mhidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .mhidden-lg {
+    display: none !important;
+  }
+}
+.mvisible-print {
+  display: none !important;
+}
+@media print {
+  .mvisible-print {
+    display: block !important;
+  }
+  table.mmvisible-print {
+    display: table !important;
+  }
+  tr.mmvisible-print {
+    display: table-row !important;
+  }
+  th.mmvisible-print,
+  td.mmvisible-print {
+    display: table-cell !important;
+  }
+}
+.mmvisible-print-block {
+  display: none !important;
+}
+@media print {
+  .mmvisible-print-block {
+    display: block !important;
+  }
+}
+.mmvisible-print-inline {
+  display: none !important;
+}
+@media print {
+  .mmvisible-print-inline {
+    display: inline !important;
+  }
+}
+.mmvisible-print-inline-block {
+  display: none !important;
+}
+@media print {
+  .mmvisible-print-inline-block {
+    display: inline-block !important;
+  }
+}
+@media print {
+  .mhidden-print {
+    display: none !important;
+  }
+}
+
+/*BOOTSTRAP SHITS*/

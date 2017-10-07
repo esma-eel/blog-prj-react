@@ -1,0 +1,87 @@
+@import "fonts";
+@import 'colors';
+@import "bootstrapThings";
+@import "mixins";
+
+.m-tabs {
+  padding: 20px;
+}
+
+.index-wrapper {
+  width: 100%;
+  max-width:none;
+}
+
+.full {
+  width: 100%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 90vh;
+  background-color: yellow;
+}
+
+.mheader-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mtransparent-search {
+  background-color:rgba(0,0,0,0.6);
+  padding: 25px;
+  text-align: center;
+  width: 80%;
+}
+
+.post-intro {
+  text-align: center;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.xic{
+  padding:0 10px;
+}
+
+
+
+.background-lands {
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size:cover;
+  background-size:cover;
+  background-blend-mode: overlay;
+}
+
+.mhero-post {
+  @include mhero(white, rgba(0, 167, 44, 0.52), 'pexels-photo-261949.jpeg');
+}
+
+.mhero-header {
+  @include mhero(white, rgba(167, 149, 15, 0.52), 'pexels-photo-409701.jpeg');
+}
+
+.mhero-searching {
+  @include mhero(white, rgba(115, 63, 30, 0.78), 'pexels-photo-316681.jpeg');
+}
+
+.mhero-dashboard {
+  @include mhero(white, rgba(0, 115, 86, 0.78), 'pexels-photo-288477.jpeg');
+}
+
+.post {
+  @include vh-height(50vh);
+}
+
+.dash-post {
+  @include vh-height(35vh);
+}
+
+.x {
+  border:1px solid blue;
+}
