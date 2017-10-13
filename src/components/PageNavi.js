@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import { Divider, Menu } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 import "../semantic/dist/semantic.rtl.min.css";
 import '../css/master.css';
 

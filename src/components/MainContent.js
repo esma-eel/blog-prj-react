@@ -10,8 +10,18 @@ import '../css/master.css';
 
 class MainContent extends Component {
 
+    componentWillReceiveProps(newProps) {
+        console.log('NEW PROPS :::::::::::: ',newProps);
+        this.setState({
+            data : newProps.data,
+        });
+    }
+
     constructor(props) {
         super(props);
+        this.state = {
+            data : {},
+        }
     }
 
     render() {
@@ -24,7 +34,7 @@ class MainContent extends Component {
 
                         <PostIntro hText='آخرین مطالب' infoText='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از' />
                         <Divider hidden='true' />
-                        <Articles data = {this.props.data}/>
+                        <Articles data = {this.state.data}/>
                         <PageNavi />
                     </main>
                     <Divider hidden='true' />

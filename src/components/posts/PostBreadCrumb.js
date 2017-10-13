@@ -5,10 +5,6 @@ import { Breadcrumb } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 class PostBreadCrumb extends Component {
 
-  constructor(props) {
-    super(props);
-
-  }
   render() {
     return (
       <Breadcrumb>

@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 
 
-import { Button, Icon, Image as ImageComponent, Item, Label } from 'semantic-ui-react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Button, Icon , Item, Label } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import "../semantic/dist/semantic.rtl.min.css";
 import '../css/master.css';
 
 class Article extends Component {
 
-    constructor(props) {
-        super(props);
-    }
 
     // <Label as='a'>تگ 5</Label>
     renderTags(tag) {

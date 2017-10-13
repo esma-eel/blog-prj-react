@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
-import { Input, Form } from 'semantic-ui-react'
+import { Redirect } from 'react-router';
+import { Form } from 'semantic-ui-react'
+import Axios from 'axios';
 
 import "../semantic/dist/semantic.rtl.min.css";
 import '../css/master.css';
@@ -8,27 +9,65 @@ import '../css/master.css';
 class SearchHeader extends Component {
     constructor(props) {
         super(props)
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.renderResult = this.renderResult.bind(this);
+        this.state = {
+            query: '',
+            data: null,
+        }
     }
-   handleChange(e) {
-       alert(this.refs.searchded.value)
-   }
+
+    handleChange(e) {
+        let target = e.target;
+        let tname = target.name;
+        let tval = target.value;
+        this.state[tname] = tval;
+        this.setState((prevState) => {
+            query: prevState.query;
+        });
+    }
+
+    renderResult(item) {
+        Object.values(item).map(i => {
+            if (i == this.state.query) {
+                console.log(typeof(i), i.toString())
+            }
+        })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        Axios.get(`http://localhost:4000/posts?q=${this.state.query}`)
+            .then((response) => {
+                this.setState({
+                    data: response.data,
+                });
+
+                Object.values(this.state.data).map(this.renderResult);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
 
     render() {
-        
+
         return (
-          <div className="mtransparent-search">
-              <h1 className='m-large-h'>
-              جستجوی مطالب وبلاگ
-              </h1>  
-              <div className='search-header'>
-                <Form action='/searchResult'>
-                    <Form.Field>
-                        <Input placeholder='نام مقاله ، برچسب و ... را جستجو کنید'  size='large' ref='searchded' onChange={this.handleChange}/>
-                    </Form.Field>
-                </Form>
-              </div>
-          </div>
+            <div className="mtransparent-search">
+                <h1 className='m-large-h'>
+                    جستجوی مطالب وبلاگ
+              </h1>
+                <div className='search-header'>
+                    <Form action="search" onSubmit={this.handleSubmit}>
+                        <Form.Field className="huge">
+                            <input placeholder='نام مقاله ، برچسب و ... را جستجو کنید' size='large' name='query' onChange={this.handleChange} />
+                        </Form.Field>
+
+                    </Form>
+
+                </div>
+            </div>
         );
     }
 }

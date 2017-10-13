@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 
 import { Button, Comment, Form, Header } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
 import "../../semantic/dist/semantic.rtl.min.css";
 import '../../css/master.css';
 class PostComments extends Component {

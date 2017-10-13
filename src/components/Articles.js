@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import { Button, Icon, Image as ImageComponent, Item, Label } from 'semantic-ui-react';
+import { Item } from 'semantic-ui-react';
 import Article from './Article';
 import "../semantic/dist/semantic.rtl.min.css";
 import '../css/master.css';
@@ -13,7 +13,6 @@ class Articles extends Component {
     }
 
     renderArticle(post) {
-        console.log(post);
         return (<Article detail={ post } />);
     }
 

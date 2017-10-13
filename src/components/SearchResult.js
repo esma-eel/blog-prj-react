@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-
-import "../../semantic/dist/semantic.rtl.min.css";
-import '../../css/master.css';
+import "../semantic/dist/semantic.rtl.min.css";
+import '../css/master.css';
 
 class Dashboard extends Component {
     
@@ -11,7 +10,7 @@ class Dashboard extends Component {
         
         return (
            <div className="post-intro">
-               <h1>Hello this is fucking Dashboard</h1>
+               <h1>Hello this is fucking search result</h1>
            </div>
         );
     }

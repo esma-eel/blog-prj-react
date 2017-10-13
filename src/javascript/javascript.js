@@ -1,11 +1,11 @@
 
-import $ from 'jquery';
+// import $ from 'jquery';
 
-export default (function($, window, document, undefined){
+// export default (function($, window, document, undefined){
 
     
 
 
-})($, window, document);
+// })($, window, document);
 
 
