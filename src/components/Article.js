@@ -24,8 +24,7 @@ class Article extends Component {
                 <Item.Content>
                     <Item.Header as='a'>
                     <Link to={{
-                                pathname: `/article/${detail.slug}`,
-                                query: detail,
+                                pathname: `/article/${detail.id}`,
                             }}>
                         {detail.title} </Link>
                         </Item.Header>
@@ -46,8 +45,7 @@ class Article extends Component {
                     </Item.Description>
                     <Item.Extra>
                     <Link to={{
-                                pathname: `/article/${detail.slug}`,
-                                query: detail,
+                                pathname: `/article/${detail.id}`,
                             }}>
                         <Button secondary floated='right'>
                             

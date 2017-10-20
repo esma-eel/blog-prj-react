@@ -29,11 +29,7 @@ class SearchHeader extends Component {
     }
 
     renderResult(item) {
-        Object.values(item).map(i => {
-            if (i == this.state.query) {
-                console.log(typeof(i), i.toString())
-            }
-        })
+        console.log(item)
     }
 
     handleSubmit(e) {
@@ -59,7 +55,7 @@ class SearchHeader extends Component {
                     جستجوی مطالب وبلاگ
               </h1>
                 <div className='search-header'>
-                    <Form action="search" onSubmit={this.handleSubmit}>
+                    <Form onSubmit={this.handleSubmit}>
                         <Form.Field className="huge">
                             <input placeholder='نام مقاله ، برچسب و ... را جستجو کنید' size='large' name='query' onChange={this.handleChange} />
                         </Form.Field>

@@ -12,9 +12,9 @@ const routs = (
     <HashRouter>
         <Switch>
             <Route exact path="/" component={App}/>
-            <Route path="/article/:slug" component={FullPost}/>
+            <Route exat path="/article/:id" component={FullPost}/>
             <Route path="/dashboard" component={Dashboard}/>
-            <Route path="/SearchResult" component={SearchResult}/>
+            <Route path="/search/:search" component={SearchResult}/>
             <Route path="/article:/:slug/dashboard" component={Dashboard}/>
         </Switch>
     </HashRouter>

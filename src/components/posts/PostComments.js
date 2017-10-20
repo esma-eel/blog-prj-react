@@ -13,10 +13,12 @@ class PostComments extends Component {
         this.generateComment = this.generateComment.bind(this);
         this.state = {
             comments: [
-                'ایول حاجی'
-                ,
-                'عجب مقاله ای'
+                {cm : 'باریکلا',
+            time: 'چهار روز پیش'},
+            {cm : 'عالی بود',
+            time: 'سه روز پیش'},
             ],
+            nowc : false,
         }
     }
 
@@ -29,8 +31,9 @@ class PostComments extends Component {
 
 
     handleSubmit(e) {
+        this.setState({nowc : true})
         let cmval = this.refs.cmt.value;
-        this.state.comments.push(cmval);
+        this.state.comments.push({cm : cmval, time : 'همین الان'});
         this.setState((prevState) => {
             comments: prevState.comments;
         });
@@ -40,16 +43,20 @@ class PostComments extends Component {
 
     generateComment(newComment, i) {
 
-
         return (
             <Comment key={i}>
                 <Comment.Avatar src='http://via.placeholder.com/50x50' />
                 <Comment.Content>
                     <Comment.Author as='a'>اسماعیل</Comment.Author>
                     <Comment.Metadata>
-                        <div>همین الان</div>
+                        <div>
+                            {
+                                newComment.time
+                            }
+
+                        </div>
                     </Comment.Metadata>
-                    <Comment.Text>{newComment}</Comment.Text>
+                    <Comment.Text>{newComment.cm}</Comment.Text>
                     <Comment.Actions>
                         <Comment.Action>پاسخ</Comment.Action>
                     </Comment.Actions>
@@ -65,7 +72,7 @@ class PostComments extends Component {
 
         return (
             <Comment.Group>
-                <Header as='h3' dividing>Comments</Header>
+                <Header as='h3' dividing>دیدگاه ها</Header>
 
 
                 {this.state.comments.map(this.generateComment)}

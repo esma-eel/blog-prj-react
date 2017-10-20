@@ -35,7 +35,8 @@ class MainContent extends Component {
                         <PostIntro hText='آخرین مطالب' infoText='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از' />
                         <Divider hidden='true' />
                         <Articles data = {this.state.data}/>
-                        <PageNavi />
+                        
+                        <PageNavi/>
                     </main>
                     <Divider hidden='true' />
                 </Container>

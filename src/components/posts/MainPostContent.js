@@ -9,31 +9,46 @@ import '../../css/master.css';
 import PostBreadCrumb from './PostBreadCrumb';
 class MainPostContent extends Component {
 
-
-     // <Label as='a'>تگ 5</Label>
-     renderTags(tag) {
-        return (<Label as='a'>{tag}</Label>);
+    constructor(props) {
+        super(props);
+        this.state = {
+            detail: {},
+        }
+        this.renderTags = this.renderTags.bind(this);
     }
 
+    componentWillReceiveProps(nextProps) {
+         this.setState({ detail : nextProps.sentData});
+     }
+
+     
+     renderTags(tg) {
+         let x = tg.join("*");
+        return (<Label as='a'>{x}</Label>);
+    }
+
+   
+
     render() {
-        let detail = this.props.sentData;
+        let fuck = [];
+        fuck.push(this.state.detail.tages);
         return (
             <div className="index-wrapper">
                 <Divider hidden='true' />
                 
                 <Container>
-                <PostBreadCrumb title={detail.title}/>
+                <PostBreadCrumb title={this.state.detail.title}/>
                     <main>
 
-                        <PostIntro hText='به نام خدا' infoText={detail.kholase} />
+                        <PostIntro hText='به نام خدا' infoText={this.state.detail.kholase} />
                         <Divider hidden='true' />
 
                         <p>
-                            {detail.description}
+                            {this.state.detail.description}
                         </p>
                         <br />
                         <p>
-                            {detail.description}
+                            {this.state.detail.description}
                         </p>
 
                         <p>
@@ -43,7 +58,7 @@ class MainPostContent extends Component {
                         <p>
                         <strong>تگ های این مطلب : </strong>
                         <em>
-                            {Object.values(detail.tages).map(this.renderTags)}
+                            {this.renderTags(fuck)}
                         </em>
                         </p>
 
